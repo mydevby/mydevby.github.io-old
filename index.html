@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header class="header">
+		<button class="js-open-rule btn-rule"></button>
+		<a class="logo-link" href="https://prestoheads.com/en/">
+			<img class="logo-img" src="img/logo.png" alt="Логотип PrestoHeads">
+		</a>	
+	</header>
+	<main class="main">
+		<div class="pano" id="pano"></div>
+	</main>
+	<footer class="footer">
+		<div class="top">
+			<div class="points">
+				Баллы: <span class="js-point">0</span>
+			</div>
+			<div class="time" id="js-time">
+				Время: <span class="js-minutes">01</span>:<span class="js-seconds">00</span>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_01.jpg" alt="Изображение для поиска 01">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_02.jpg" alt="Изображение для поиска 02">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_03.jpg" alt="Изображение для поиска 03">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_04.jpg" alt="Изображение для поиска 04">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_05.jpg" alt="Изображение для поиска 05">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_06.jpg" alt="Изображение для поиска 06">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_07.jpg" alt="Изображение для поиска 07">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_08.jpg" alt="Изображение для поиска 08">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_09.jpg" alt="Изображение для поиска 09">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_10.jpg" alt="Изображение для поиска 10">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_11.jpg" alt="Изображение для поиска 11">
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-slide-img" src="img/slider/slide_12.jpg" alt="Изображение для поиска 12">
+					</div>
+				</div>
+			</div>	
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</footer>
+
+	<div class="modal-rule-wrap">
+		<div class="modal-rule">
+			<h2 class="modal-title">Правила</h2>
+			<ul class="rule-list">
+				<li class="rule-item">
+					<div class="rule-icon rule-icon-see"></div>
+					<p class="rule-text">Осматривай<br>Прагу</p>
+				</li>
+				<li class="rule-item">
+					<div class="rule-icon rule-icon-search"></div>
+					<p class="rule-text">Находи<br>секретные места</p>
+				</li>
+				<li class="rule-item">
+					<div class="rule-icon rule-icon-points"></div>
+					<p class="rule-text">Зарабатывай<br>баллы</p>
+				</li>
+			</ul>
+			<p class="rule-warning">Внимание! Время ограниченно!</p>
+			<button class="js-start-game start-game">Начать игру</button>
+		</div>
+	</div>
+
+	<div class="modal-end-wrap">
+		<div class="modal-end">
+			<h2 class="modal-title">Ваш результат</h2>
+
+			<p class="time">Время: <span class="js-rezult-min">00</span>:<span class="js-rezult-sec">00</span></p>
+			<p class="point">Баллы: <span class="js-rezult-point">0</span></p>
+			<button class="js-restart-game restart-game">Сыграть ещё раз</button>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+	<script src="js/krpano.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

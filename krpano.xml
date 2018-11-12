@@ -1,0 +1,74 @@
+<krpano version="1.19">
+
+		<style name="hotspot_style" visible="true" keep="true" capture="false" handcursor="false" distorted="false" alpha="1"/>
+		<hotspot name="hs-1" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-118.14" atv="11.60" onclick="events.myfu(1);" min_level="10"/>
+		<hotspot name="hs-2" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="162.51" atv="5.21" onclick="events.myfu(2);" min_level="11"/>
+		<hotspot name="hs-3" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-176.16" atv="2.51" onclick="events.myfu(3);" min_level="12"/>
+		<hotspot name="hs-4" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="69.92" atv="19.24" onclick="events.myfu(4);" min_level="10"/>
+		<hotspot name="hs-5" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-7.69" atv="2.47" onclick="events.myfu(5);" min_level="9"/>
+		<hotspot name="hs-6" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-2.65" atv="8.09" onclick="events.myfu(6);" min_level="10"/>
+		<hotspot name="hs-7" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-44.90" atv="1.83" onclick="events.myfu(7);" min_level="10"/>
+		<hotspot name="hs-8" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-11.08" atv="13.34" onclick="events.myfu(8);" min_level="11"/>
+		<hotspot name="hs-9" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-28.17" atv="5.91" onclick="events.myfu(9);" min_level="10"/>
+		<hotspot name="hs-10" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="23.32" atv="0.58" onclick="events.myfu(10);" min_level="10"/>
+		<hotspot name="hs-11" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="101.92" atv="27.22" onclick="events.myfu(11);" min_level="8"/>
+		<hotspot name="hs-12" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-150.50" atv="9.24" onclick="events.myfu(12);" min_level="11"/>
+		<view vlookatmin = "-45" vlookatmax = "45" lookat="0" maxpixelzoom="0.5" fovmax="100" limitview="range" fov="100" fovmin="0" />
+		<preview url="http://360gigapixels.com/tiles/PETRIN2013/tiles-onlin/preview.jpg" />
+		<image type="CUBE" multires="true" tilesize="512"  progressive="true" voffset="0.00">
+			<level tiledimagewidth="84683" tiledimageheight="84683">
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l8/%v/l8_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="42342" tiledimageheight="42342">
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l7/%v/l7_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="21171" tiledimageheight="21171">
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l6/%v/l6_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="10586" tiledimageheight="10586">
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l5/%v/l5_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="5293" tiledimageheight="5293">
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2647" tiledimageheight="2647">
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1324" tiledimageheight="1324">
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="662" tiledimageheight="662">
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+
+
+
+
+	<events onviewchange="checkfovchange();"/>
+	<action name="checkfovchange">
+		set(level,1);
+		if(view.fov LT 90, set(level,2) );
+		if(view.fov LT 80, set(level,3) );
+		if(view.fov LT 60, set(level,4) );
+		if(view.fov LT 50, set(level,5) );
+		if(view.fov LT 40, set(level,6) );
+		if(view.fov LT 30, set(level,7) );
+		if(view.fov LT 20, set(level,8) );
+		if(view.fov LT 10, set(level,9) );
+		if(view.fov LT 7, set(level,10) );
+		if(view.fov LT 5, set(level,11) );
+		if(view.fov LT 4, set(level,12) );
+		if(view.fov LT 3, set(level,13) );
+		if(lastlevel != level, copy(lastlevel,level); levelchanged(); );
+	</action>
+	<action name="levelchanged">do_level_stuff(level);</action>
+	<action name="do_level_stuff">
+		trace('Level:',%1); for(set(i,0), i LT hotspot.count, inc(i), if(hotspot[get(i)].min_level LE %1, set(hotspot[get(i)].visible, true); mul(new_scale,0.5,level);set(hotspot[get(i)].scale, get(new_scale)); , set(hotspot[get(i)].visible, false); );	);
+	</action>
+
+</krpano>
