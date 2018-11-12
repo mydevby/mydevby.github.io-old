@@ -14,7 +14,6 @@
 		<hotspot name="hs-11" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="101.92" atv="27.22" onclick="events.myfu(11);" min_level="8"/>
 		<hotspot name="hs-12" url="%SWFPATH%/img/buuu.png" style="hotspot_style" ath="-150.50" atv="9.24" onclick="events.myfu(12);" min_level="11"/>
 		<view vlookatmin = "-45" vlookatmax = "45" lookat="0" maxpixelzoom="0.5" fovmax="100" limitview="range" fov="100" fovmin="0" />
-		<preview url="http://360gigapixels.com/tiles/PETRIN2013/tiles-onlin/preview.jpg" />
 		<image type="CUBE" multires="true" tilesize="512"  progressive="true" voffset="0.00">
 			<level tiledimagewidth="84683" tiledimageheight="84683">
 				<cube url="http://360gigapixels.com/tiles/PETRIN2013/tiles-online/mres_%s/l8/%v/l8_%s_%v_%h.jpg" />
